@@ -22,13 +22,13 @@ apply plugin: "com.matthewprenger.cursegradle"
 def mod_file = getModFile()
 version = getVersion("VERSION", mod_file)
 group= "com.mcmoddev"
-archivesBaseName = "PowerAdvantage-1.11.2"
+archivesBaseName = "PowerAdvantage-1.12.2"
 sourceCompatibility = targetCompatibility = "1.8"
 
 minecraft {
-    version = "1.11.2-13.20.1.2386"
+    version = "1.12.2-14.23.5.2768"
     runDir = "run"
-    mappings = "stable_32"
+    mappings = "stable_39"
 }
 
 repositories {

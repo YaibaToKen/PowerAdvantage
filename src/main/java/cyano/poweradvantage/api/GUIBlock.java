@@ -1,5 +1,6 @@
 package cyano.poweradvantage.api;
 
+import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -37,7 +38,7 @@ public abstract class GUIBlock extends BlockContainer {
 	 */
 	public GUIBlock(Material m) {
 		super(m);
-        this.setLightOpacity(0);
+		this.setLightOpacity(0);
 	}
 	
 	private int guiId = 0;
