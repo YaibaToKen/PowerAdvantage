@@ -1,4 +1,4 @@
-package cyano.poweradvantage.util;
+package com.mcmoddev.poweradvantage.util;
 
 import java.lang.reflect.Field;
 import com.google.common.collect.BiMap;

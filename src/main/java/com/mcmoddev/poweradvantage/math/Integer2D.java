@@ -1,4 +1,4 @@
-package cyano.poweradvantage.math;
+package com.mcmoddev.poweradvantage.math;
 
 /**
  * This class is used to store 2D integer coordinates

@@ -3,4 +3,4 @@
 This package contains helper classes.
 </p>
 */
-package cyano.poweradvantage.math;
+package com.mcmoddev.poweradvantage.math;

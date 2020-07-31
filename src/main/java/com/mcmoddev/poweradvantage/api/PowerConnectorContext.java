@@ -1,4 +1,4 @@
-package cyano.poweradvantage.api;
+package com.mcmoddev.poweradvantage.api;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.EnumFacing;

@@ -1,6 +1,7 @@
-package cyano.poweradvantage.machines.conveyors;
+package com.mcmoddev.poweradvantage.machines.conveyors;
 
-import cyano.poweradvantage.util.InventoryWrapper;
+import com.mcmoddev.poweradvantage.util.InventoryWrapper;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.inventory.IInventory;

@@ -1,9 +1,10 @@
-package cyano.poweradvantage.blocks;
+package com.mcmoddev.poweradvantage.blocks;
 
-import cyano.poweradvantage.api.ConduitType;
-import cyano.poweradvantage.api.ITypedConduit;
-import cyano.poweradvantage.api.PowerConnectorContext;
-import cyano.poweradvantage.conduitnetwork.ConduitRegistry;
+import com.mcmoddev.poweradvantage.api.ConduitType;
+import com.mcmoddev.poweradvantage.api.ITypedConduit;
+import com.mcmoddev.poweradvantage.api.PowerConnectorContext;
+import com.mcmoddev.poweradvantage.conduitnetwork.ConduitRegistry;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;

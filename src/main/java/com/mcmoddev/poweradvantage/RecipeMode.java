@@ -1,4 +1,4 @@
-package cyano.poweradvantage;
+package com.mcmoddev.poweradvantage;
 
 /**
  * Differnet recipe modes change the difficulty and means by which the players make the core items 

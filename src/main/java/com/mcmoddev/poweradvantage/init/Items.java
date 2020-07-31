@@ -1,8 +1,12 @@
-package cyano.poweradvantage.init;
+package com.mcmoddev.poweradvantage.init;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+
+import com.mcmoddev.poweradvantage.PowerAdvantage;
+import com.mcmoddev.poweradvantage.items.RotationTool;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -11,8 +15,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.oredict.OreDictionary;
-import cyano.poweradvantage.PowerAdvantage;
-import cyano.poweradvantage.items.RotationTool;
 
 public abstract class Items {
 

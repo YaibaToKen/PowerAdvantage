@@ -1,4 +1,4 @@
-package cyano.poweradvantage.api;
+package com.mcmoddev.poweradvantage.api;
 
 /**
  * <p>

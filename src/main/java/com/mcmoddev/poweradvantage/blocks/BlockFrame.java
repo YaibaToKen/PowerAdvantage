@@ -1,4 +1,4 @@
-package cyano.poweradvantage.blocks;
+package com.mcmoddev.poweradvantage.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;

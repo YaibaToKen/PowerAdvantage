@@ -1,4 +1,4 @@
-package cyano.poweradvantage.gui;
+package com.mcmoddev.poweradvantage.gui;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;

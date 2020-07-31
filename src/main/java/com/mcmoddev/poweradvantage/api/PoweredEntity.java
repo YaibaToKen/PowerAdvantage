@@ -1,6 +1,5 @@
-package cyano.poweradvantage.api;
+package com.mcmoddev.poweradvantage.api;
 
-import cyano.poweradvantage.conduitnetwork.ConduitRegistry;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
@@ -12,10 +11,12 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
+import com.mcmoddev.poweradvantage.conduitnetwork.ConduitRegistry;
+
 /**
  * This class is the superclass for all machines. 
  * If you are making an add-on mod, you probably want to extend the 
- * <b>cyano.poweradvantage.api.simple.TileEntitySimplePowerConduit</b> class 
+ * <b>com.mcmoddev.poweradvantage.api.simple.TileEntitySimplePowerConduit</b> class 
  * instead of this class.
  * <p>
  * Conceptually, a PoweredEntity is any block that has an internal energy buffer, 

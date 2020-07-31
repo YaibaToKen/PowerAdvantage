@@ -1,4 +1,4 @@
-package cyano.poweradvantage.init;
+package com.mcmoddev.poweradvantage.init;
 
 import com.mcmoddev.basemetals.util.VillagerTradeHelper;
 import net.minecraft.entity.passive.EntityVillager;

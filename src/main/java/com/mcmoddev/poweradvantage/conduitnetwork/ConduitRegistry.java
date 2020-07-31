@@ -1,14 +1,5 @@
-package cyano.poweradvantage.conduitnetwork;
+package com.mcmoddev.poweradvantage.conduitnetwork;
 
-import cyano.poweradvantage.PowerAdvantage;
-import cyano.poweradvantage.api.ConduitType;
-import cyano.poweradvantage.api.IPowerMachine;
-import cyano.poweradvantage.api.ITypedConduit;
-import cyano.poweradvantage.api.PowerRequest;
-import cyano.poweradvantage.api.modsupport.ExternalPowerRequest;
-import cyano.poweradvantage.api.modsupport.LightWeightPowerRegistry;
-import cyano.poweradvantage.api.modsupport.Wrappers;
-import cyano.poweradvantage.math.BlockPos4D;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.tileentity.TileEntity;
@@ -19,6 +10,16 @@ import net.minecraft.world.World;
 import java.util.*;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+
+import com.mcmoddev.poweradvantage.PowerAdvantage;
+import com.mcmoddev.poweradvantage.api.ConduitType;
+import com.mcmoddev.poweradvantage.api.IPowerMachine;
+import com.mcmoddev.poweradvantage.api.ITypedConduit;
+import com.mcmoddev.poweradvantage.api.PowerRequest;
+import com.mcmoddev.poweradvantage.api.modsupport.ExternalPowerRequest;
+import com.mcmoddev.poweradvantage.api.modsupport.LightWeightPowerRegistry;
+import com.mcmoddev.poweradvantage.api.modsupport.Wrappers;
+import com.mcmoddev.poweradvantage.math.BlockPos4D;
 
 /**
  * This is the master keeper of power networks.

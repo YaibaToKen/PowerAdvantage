@@ -1,4 +1,4 @@
-package cyano.poweradvantage.items;
+package com.mcmoddev.poweradvantage.items;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;

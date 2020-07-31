@@ -1,4 +1,4 @@
-package cyano.poweradvantage.conduitnetwork;
+package com.mcmoddev.poweradvantage.conduitnetwork;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,10 +7,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.locks.ReadWriteLock;
 
-import cyano.poweradvantage.api.ConduitType;
-import cyano.poweradvantage.api.PowerConnectorContext;
-import cyano.poweradvantage.math.BlockPos4D;
-import cyano.poweradvantage.util.PowerHelper;
+import com.mcmoddev.poweradvantage.api.ConduitType;
+import com.mcmoddev.poweradvantage.api.PowerConnectorContext;
+import com.mcmoddev.poweradvantage.math.BlockPos4D;
+import com.mcmoddev.poweradvantage.util.PowerHelper;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;

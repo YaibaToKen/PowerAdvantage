@@ -1,4 +1,4 @@
-package cyano.poweradvantage.math;
+package com.mcmoddev.poweradvantage.math;
 
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagIntArray;

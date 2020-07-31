@@ -1,4 +1,4 @@
-package cyano.poweradvantage.api.fluid;
+package com.mcmoddev.poweradvantage.api.fluid;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -56,10 +56,11 @@ public class InteractiveFluidBlock extends BlockFluidClassic {
 
 
 	@Override
-	public void onEntityCollidedWithBlock(World world, BlockPos coord, IBlockState state, Entity entity) {
-		if (immersionEffect != null && entity instanceof EntityLivingBase
-				) {
+	public void onEntityCollision(World world, BlockPos coord, IBlockState state, Entity entity) {
+		if (immersionEffect != null && entity instanceof EntityLivingBase) {
 			immersionEffect.accept(world, (EntityLivingBase) entity);
+		} else {
+			super.onEntityCollision(world, coord, state, entity);
 		}
 	}
 

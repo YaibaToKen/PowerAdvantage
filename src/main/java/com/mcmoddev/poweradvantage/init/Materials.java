@@ -1,4 +1,4 @@
-package cyano.poweradvantage.init;
+package com.mcmoddev.poweradvantage.init;
 
 
 public class Materials {

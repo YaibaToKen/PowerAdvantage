@@ -1,4 +1,4 @@
-package cyano.poweradvantage.api;
+package com.mcmoddev.poweradvantage.api;
 
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;

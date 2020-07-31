@@ -1,4 +1,4 @@
-package cyano.poweradvantage.api;
+package com.mcmoddev.poweradvantage.api;
 
 /**
  * Implement this method in every TileEntity and Block that interacts with energy. 

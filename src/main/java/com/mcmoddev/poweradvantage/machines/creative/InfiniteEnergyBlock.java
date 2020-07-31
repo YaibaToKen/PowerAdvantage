@@ -1,8 +1,9 @@
-package cyano.poweradvantage.machines.creative;
+package com.mcmoddev.poweradvantage.machines.creative;
 
-import cyano.poweradvantage.api.ConduitType;
-import cyano.poweradvantage.api.PoweredEntity;
-import cyano.poweradvantage.api.simple.BlockSimplePowerMachine;
+import com.mcmoddev.poweradvantage.api.ConduitType;
+import com.mcmoddev.poweradvantage.api.PoweredEntity;
+import com.mcmoddev.poweradvantage.api.simple.BlockSimplePowerMachine;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.math.BlockPos;

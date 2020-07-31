@@ -1,9 +1,5 @@
-package cyano.poweradvantage.machines.fluidmachines;
+package com.mcmoddev.poweradvantage.machines.fluidmachines;
 
-import cyano.poweradvantage.api.ConduitType;
-import cyano.poweradvantage.api.PoweredEntity;
-import cyano.poweradvantage.api.simple.BlockSimpleFluidMachine;
-import cyano.poweradvantage.init.ItemGroups;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -17,6 +13,11 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.Random;
+
+import com.mcmoddev.poweradvantage.api.ConduitType;
+import com.mcmoddev.poweradvantage.api.PoweredEntity;
+import com.mcmoddev.poweradvantage.api.simple.BlockSimpleFluidMachine;
+import com.mcmoddev.poweradvantage.init.ItemGroups;
 
 public class FluidDrainBlock extends BlockSimpleFluidMachine {
 

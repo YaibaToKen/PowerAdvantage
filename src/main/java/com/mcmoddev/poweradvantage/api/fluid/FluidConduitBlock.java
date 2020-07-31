@@ -1,9 +1,10 @@
-package cyano.poweradvantage.api.fluid;
+package com.mcmoddev.poweradvantage.api.fluid;
 
-import cyano.poweradvantage.api.ConduitBlock;
-import cyano.poweradvantage.api.ConduitType;
-import cyano.poweradvantage.api.PowerConnectorContext;
-import cyano.poweradvantage.init.Fluids;
+import com.mcmoddev.poweradvantage.api.ConduitBlock;
+import com.mcmoddev.poweradvantage.api.ConduitType;
+import com.mcmoddev.poweradvantage.api.PowerConnectorContext;
+import com.mcmoddev.poweradvantage.init.Fluids;
+
 import net.minecraft.block.material.Material;
 
 /**
@@ -15,7 +16,7 @@ import net.minecraft.block.material.Material;
  * you call <code>getType()</code>, but a water pump will poll the network with the "water" 
  * ConduitType and the tank will file a PowerRequest based on how much water it can hold.
  * </p><p>
- * You probably want to use the BlockSimpleFluidConduit class in the cyano.poweradvantage.api.simple 
+ * You probably want to use the BlockSimpleFluidConduit class in the com.mcmoddev.poweradvantage.api.simple 
  * package.
  * </p>
  * @author DrCyano

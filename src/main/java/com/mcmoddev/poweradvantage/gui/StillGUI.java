@@ -1,8 +1,9 @@
-package cyano.poweradvantage.gui;
+package com.mcmoddev.poweradvantage.gui;
 
-import cyano.poweradvantage.api.simple.SimpleMachineGUI;
-import cyano.poweradvantage.machines.fluidmachines.StillTileEntity;
-import cyano.poweradvantage.math.Integer2D;
+import com.mcmoddev.poweradvantage.api.simple.SimpleMachineGUI;
+import com.mcmoddev.poweradvantage.machines.fluidmachines.StillTileEntity;
+import com.mcmoddev.poweradvantage.math.Integer2D;
+
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.FluidStack;
 

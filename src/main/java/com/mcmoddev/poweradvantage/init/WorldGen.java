@@ -1,4 +1,4 @@
-package cyano.poweradvantage.init;
+package com.mcmoddev.poweradvantage.init;
 
 public abstract class WorldGen {
 

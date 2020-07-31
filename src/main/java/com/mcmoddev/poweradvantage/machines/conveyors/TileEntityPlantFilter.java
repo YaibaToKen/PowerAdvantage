@@ -1,4 +1,4 @@
-package cyano.poweradvantage.machines.conveyors;
+package com.mcmoddev.poweradvantage.machines.conveyors;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.IGrowable;

@@ -1,8 +1,9 @@
-package cyano.poweradvantage.init;
+package com.mcmoddev.poweradvantage.init;
 
-import cyano.poweradvantage.PowerAdvantage;
 import net.minecraftforge.fml.common.FMLLog;
 import org.apache.logging.log4j.Level;
+
+import com.mcmoddev.poweradvantage.PowerAdvantage;
 
 import java.io.IOException;
 import java.nio.charset.Charset;

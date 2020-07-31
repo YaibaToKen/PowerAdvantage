@@ -1,9 +1,6 @@
-package cyano.poweradvantage.api.simple;
+package com.mcmoddev.poweradvantage.api.simple;
 
 
-import cyano.poweradvantage.PowerAdvantage;
-import cyano.poweradvantage.math.Integer2D;
-import cyano.poweradvantage.registry.ITileEntityGUI;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -15,6 +12,10 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
+
+import com.mcmoddev.poweradvantage.PowerAdvantage;
+import com.mcmoddev.poweradvantage.math.Integer2D;
+import com.mcmoddev.poweradvantage.registry.ITileEntityGUI;
 
 import java.util.HashMap;
 import java.util.Map;

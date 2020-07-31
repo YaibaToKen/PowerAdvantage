@@ -1,4 +1,4 @@
-package cyano.poweradvantage.util;
+package com.mcmoddev.poweradvantage.util;
 
 public abstract class HashCodeHelper {
 

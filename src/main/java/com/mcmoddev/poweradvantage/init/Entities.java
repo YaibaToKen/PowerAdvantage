@@ -1,11 +1,12 @@
-package cyano.poweradvantage.init;
+package com.mcmoddev.poweradvantage.init;
+
+import com.mcmoddev.poweradvantage.PowerAdvantage;
+import com.mcmoddev.poweradvantage.machines.conveyors.*;
+import com.mcmoddev.poweradvantage.machines.creative.InfiniteEnergyTileEntity;
+import com.mcmoddev.poweradvantage.machines.fluidmachines.*;
+import com.mcmoddev.poweradvantage.machines.fluidmachines.modsupport.TerminalFluidPipeTileEntity;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import cyano.poweradvantage.PowerAdvantage;
-import cyano.poweradvantage.machines.conveyors.*;
-import cyano.poweradvantage.machines.creative.InfiniteEnergyTileEntity;
-import cyano.poweradvantage.machines.fluidmachines.*;
-import cyano.poweradvantage.machines.fluidmachines.modsupport.TerminalFluidPipeTileEntity;
 
 public abstract class Entities {
 

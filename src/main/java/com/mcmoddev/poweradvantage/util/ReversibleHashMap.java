@@ -1,4 +1,4 @@
-package cyano.poweradvantage.util;
+package com.mcmoddev.poweradvantage.util;
 
 import java.util.Collection;
 import java.util.Map;

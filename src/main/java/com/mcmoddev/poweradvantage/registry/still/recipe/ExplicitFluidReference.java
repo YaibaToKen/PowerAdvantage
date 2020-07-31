@@ -1,4 +1,4 @@
-package cyano.poweradvantage.registry.still.recipe;
+package com.mcmoddev.poweradvantage.registry.still.recipe;
 
 import net.minecraftforge.fluids.Fluid;
 

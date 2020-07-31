@@ -1,4 +1,10 @@
-package cyano.poweradvantage.machines.fluidmachines;
+package com.mcmoddev.poweradvantage.machines.fluidmachines;
+
+import com.mcmoddev.poweradvantage.api.ConduitType;
+import com.mcmoddev.poweradvantage.api.PowerRequest;
+import com.mcmoddev.poweradvantage.api.fluid.FluidRequest;
+import com.mcmoddev.poweradvantage.api.simple.TileEntitySimpleFluidMachine;
+import com.mcmoddev.poweradvantage.util.FluidHelper;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.ForgeModContainer;
@@ -6,11 +12,6 @@ import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.capability.IFluidTankProperties;
-import cyano.poweradvantage.api.ConduitType;
-import cyano.poweradvantage.api.PowerRequest;
-import cyano.poweradvantage.api.fluid.FluidRequest;
-import cyano.poweradvantage.api.simple.TileEntitySimpleFluidMachine;
-import cyano.poweradvantage.util.FluidHelper;
 
 public class MetalTankTileEntity  extends TileEntitySimpleFluidMachine {
 

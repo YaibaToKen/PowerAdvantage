@@ -1,4 +1,4 @@
-package cyano.poweradvantage.util;
+package com.mcmoddev.poweradvantage.util;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;

@@ -1,4 +1,4 @@
-package cyano.poweradvantage.api;
+package com.mcmoddev.poweradvantage.api;
 
 /**
  * Tile entities that wish to create or receive power must implement this interface, though it is 

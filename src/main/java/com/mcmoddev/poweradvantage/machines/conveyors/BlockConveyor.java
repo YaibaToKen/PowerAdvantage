@@ -1,4 +1,7 @@
-package cyano.poweradvantage.machines.conveyors;
+package com.mcmoddev.poweradvantage.machines.conveyors;
+
+import com.mcmoddev.poweradvantage.api.GUIBlock;
+import com.mcmoddev.poweradvantage.init.ItemGroups;
 
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -17,8 +20,6 @@ import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.FMLLog;
-import cyano.poweradvantage.api.GUIBlock;
-import cyano.poweradvantage.init.ItemGroups;
 
 public class BlockConveyor extends GUIBlock {
 

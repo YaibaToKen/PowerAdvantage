@@ -1,4 +1,4 @@
-package cyano.poweradvantage.util;
+package com.mcmoddev.poweradvantage.util;
 
 public interface ReversibleMap<K,V> extends java.util.Map<K,V> {
 

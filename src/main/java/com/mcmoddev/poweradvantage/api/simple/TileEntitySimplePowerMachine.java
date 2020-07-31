@@ -1,10 +1,5 @@
-package cyano.poweradvantage.api.simple;
+package com.mcmoddev.poweradvantage.api.simple;
 
-import cyano.poweradvantage.api.ConduitType;
-import cyano.poweradvantage.api.PowerConnectorContext;
-import cyano.poweradvantage.api.PowerRequest;
-import cyano.poweradvantage.api.PoweredEntity;
-import cyano.poweradvantage.conduitnetwork.ConduitRegistry;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
@@ -19,8 +14,14 @@ import net.minecraft.util.text.TextComponentTranslation;
 
 import java.util.Arrays;
 
+import com.mcmoddev.poweradvantage.api.ConduitType;
+import com.mcmoddev.poweradvantage.api.PowerConnectorContext;
+import com.mcmoddev.poweradvantage.api.PowerRequest;
+import com.mcmoddev.poweradvantage.api.PoweredEntity;
+import com.mcmoddev.poweradvantage.conduitnetwork.ConduitRegistry;
+
 /**
- * This block implements the cyano.poweradvantage.api.PowerSourceEntity 
+ * This block implements the com.mcmoddev.poweradvantage.api.PowerSourceEntity 
  * class and handles most of the mundane details for you. You just need to 
  * implement your machine logic in the <b>tickUpdate()</b> method and provide a 
  * few methods for inventory handling. So long as you use 

@@ -1,4 +1,4 @@
-package cyano.poweradvantage.registry.still.recipe;
+package com.mcmoddev.poweradvantage.registry.still.recipe;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,7 +7,8 @@ import java.util.Map;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-import cyano.poweradvantage.PowerAdvantage;
+import com.mcmoddev.poweradvantage.PowerAdvantage;
+
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;

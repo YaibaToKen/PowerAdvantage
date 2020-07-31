@@ -1,4 +1,7 @@
-package cyano.poweradvantage.machines.fluidmachines;
+package com.mcmoddev.poweradvantage.machines.fluidmachines;
+
+import com.mcmoddev.poweradvantage.api.ConduitType;
+import com.mcmoddev.poweradvantage.api.simple.TileEntitySimpleFluidMachine;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -14,8 +17,6 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidTankProperties;
-import cyano.poweradvantage.api.ConduitType;
-import cyano.poweradvantage.api.simple.TileEntitySimpleFluidMachine;
 
 
 public class FluidDischargeTileEntity extends TileEntitySimpleFluidMachine {

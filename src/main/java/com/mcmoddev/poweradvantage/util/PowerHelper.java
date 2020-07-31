@@ -1,9 +1,10 @@
-package cyano.poweradvantage.util;
+package com.mcmoddev.poweradvantage.util;
+
+import com.mcmoddev.poweradvantage.PowerAdvantage;
+import com.mcmoddev.poweradvantage.api.ITypedConduit;
+import com.mcmoddev.poweradvantage.api.PowerConnectorContext;
 
 import cofh.api.energy.IEnergyReceiver;
-import cyano.poweradvantage.PowerAdvantage;
-import cyano.poweradvantage.api.ITypedConduit;
-import cyano.poweradvantage.api.PowerConnectorContext;
 import net.minecraft.block.ITileEntityProvider;
 import reborncore.api.power.IEnergyInterfaceTile;
 

@@ -1,7 +1,8 @@
-package cyano.poweradvantage.machines.fluidmachines;
+package com.mcmoddev.poweradvantage.machines.fluidmachines;
 
-import cyano.poweradvantage.api.simple.BlockSimpleFluidConduit;
-import cyano.poweradvantage.init.Blocks;
+import com.mcmoddev.poweradvantage.api.simple.BlockSimpleFluidConduit;
+import com.mcmoddev.poweradvantage.init.Blocks;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -50,7 +51,7 @@ public class FluidPipeBlock extends BlockSimpleFluidConduit {
 		int sum = 0;
 		for (EnumFacing f : EnumFacing.values()) {
 			TileEntity e = w.getTileEntity(pos.offset(f));
-			if (e instanceof IFluidHandler && !(e instanceof cyano.poweradvantage.api.PoweredEntity)) {
+			if (e instanceof IFluidHandler && !(e instanceof com.mcmoddev.poweradvantage.api.PoweredEntity)) {
 				sum++;
 			}
 		}

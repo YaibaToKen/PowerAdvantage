@@ -1,4 +1,4 @@
-package cyano.poweradvantage.init;
+package com.mcmoddev.poweradvantage.init;
 
 import com.mcmoddev.lib.init.MMDCreativeTab;
 import net.minecraft.creativetab.CreativeTabs;

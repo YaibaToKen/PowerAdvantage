@@ -1,7 +1,7 @@
-package cyano.poweradvantage.api.fluid;
+package com.mcmoddev.poweradvantage.api.fluid;
 
-import cyano.poweradvantage.api.PowerRequest;
-import cyano.poweradvantage.api.PoweredEntity;
+import com.mcmoddev.poweradvantage.api.PowerRequest;
+import com.mcmoddev.poweradvantage.api.PoweredEntity;
 
 /**
  * A FluidRequest is a specialized PowerRequest.

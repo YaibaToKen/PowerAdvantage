@@ -1,17 +1,19 @@
-package cyano.poweradvantage.api.fluid;
+package com.mcmoddev.poweradvantage.api.fluid;
 
 import java.util.List;
+
+import com.mcmoddev.poweradvantage.api.ConduitType;
+import com.mcmoddev.poweradvantage.api.PowerRequest;
+import com.mcmoddev.poweradvantage.api.PoweredEntity;
+import com.mcmoddev.poweradvantage.conduitnetwork.ConduitRegistry;
+import com.mcmoddev.poweradvantage.init.Fluids;
+
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidTankProperties;
-import cyano.poweradvantage.api.ConduitType;
-import cyano.poweradvantage.api.PowerRequest;
-import cyano.poweradvantage.api.PoweredEntity;
-import cyano.poweradvantage.conduitnetwork.ConduitRegistry;
-import cyano.poweradvantage.init.Fluids;
 
 /**
  * <p>
@@ -24,7 +26,7 @@ import cyano.poweradvantage.init.Fluids;
  * </p><p>
  * This class provides a number of simplifications so that implementations don't need to worry about 
  * implementing the IFluidHandler interface. You probably want to use the BlockSimpleFluidConduit 
- * class in the cyano.poweradvantage.api.simple package. 
+ * class in the com.mcmoddev.poweradvantage.api.simple package. 
  * </p>
  * @author DrCyano
  *

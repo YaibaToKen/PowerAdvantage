@@ -1,11 +1,12 @@
-package cyano.poweradvantage.init;
+package com.mcmoddev.poweradvantage.init;
+
+import com.mcmoddev.poweradvantage.PowerAdvantage;
+import com.mcmoddev.poweradvantage.api.simple.SimpleMachineGUI;
+import com.mcmoddev.poweradvantage.gui.*;
+import com.mcmoddev.poweradvantage.math.Integer2D;
+import com.mcmoddev.poweradvantage.registry.MachineGUIRegistry;
 
 import net.minecraft.util.ResourceLocation;
-import cyano.poweradvantage.PowerAdvantage;
-import cyano.poweradvantage.api.simple.SimpleMachineGUI;
-import cyano.poweradvantage.gui.*;
-import cyano.poweradvantage.math.Integer2D;
-import cyano.poweradvantage.registry.MachineGUIRegistry;
 
 public abstract class GUI {
 

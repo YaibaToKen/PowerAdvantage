@@ -1,7 +1,8 @@
-package cyano.poweradvantage.machines.creative;
+package com.mcmoddev.poweradvantage.machines.creative;
 
-import cyano.poweradvantage.api.ConduitType;
-import cyano.poweradvantage.api.simple.TileEntitySimplePowerMachine;
+import com.mcmoddev.poweradvantage.api.ConduitType;
+import com.mcmoddev.poweradvantage.api.simple.TileEntitySimplePowerMachine;
+
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 

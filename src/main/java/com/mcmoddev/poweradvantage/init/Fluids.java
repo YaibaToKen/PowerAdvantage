@@ -1,10 +1,11 @@
-package cyano.poweradvantage.init;
+package com.mcmoddev.poweradvantage.init;
 
-import cyano.poweradvantage.PowerAdvantage;
-import cyano.poweradvantage.api.ConduitType;
-import cyano.poweradvantage.api.fluid.ColoredFluid;
-import cyano.poweradvantage.util.ReversibleHashMap;
-import cyano.poweradvantage.util.ReversibleMap;
+import com.mcmoddev.poweradvantage.PowerAdvantage;
+import com.mcmoddev.poweradvantage.api.ConduitType;
+import com.mcmoddev.poweradvantage.api.fluid.ColoredFluid;
+import com.mcmoddev.poweradvantage.util.ReversibleHashMap;
+import com.mcmoddev.poweradvantage.util.ReversibleMap;
+
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
@@ -44,7 +45,7 @@ public abstract class Fluids {
 	public static void init() {
 		if (initDone) return;
 
-		cyano.poweradvantage.init.Materials.init();
+		com.mcmoddev.poweradvantage.init.Materials.init();
 
 		fluidConduit_water = new ConduitType("water");
 		fluidConduit_lava = new ConduitType("lava");

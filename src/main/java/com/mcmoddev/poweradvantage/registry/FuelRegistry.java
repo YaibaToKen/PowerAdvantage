@@ -1,4 +1,4 @@
-package cyano.poweradvantage.registry;
+package com.mcmoddev.poweradvantage.registry;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -13,7 +13,7 @@ import java.util.function.Function;
 
 /**
  * The fuel registry keeps track of the cooking time for new burnables added by PowerAdvantage. The 
- * actual registration of these burnables occurs in <code>cyano.poweradvantage.init.Fuels</code>
+ * actual registration of these burnables occurs in <code>com.mcmoddev.poweradvantage.init.Fuels</code>
  * @author DrCyano
  *
  */

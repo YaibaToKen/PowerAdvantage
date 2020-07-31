@@ -1,9 +1,5 @@
-package cyano.poweradvantage.api.simple;
+package com.mcmoddev.poweradvantage.api.simple;
 
-import cyano.poweradvantage.api.ConduitBlock;
-import cyano.poweradvantage.api.ConduitType;
-import cyano.poweradvantage.api.PowerConnectorContext;
-import cyano.poweradvantage.util.PowerHelper;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyBool;
@@ -19,9 +15,14 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.List;
+
+import com.mcmoddev.poweradvantage.api.ConduitBlock;
+import com.mcmoddev.poweradvantage.api.ConduitType;
+import com.mcmoddev.poweradvantage.api.PowerConnectorContext;
+import com.mcmoddev.poweradvantage.util.PowerHelper;
 /**
  * <p>
- * This block class implements the cyano.poweradvantage.api.ConduitBlock 
+ * This block class implements the com.mcmoddev.poweradvantage.api.ConduitBlock 
  * class and renders as a pipe. You will need to have the appropriate blockstate 
  * and block model json files for it to render as pipes.
  * </p><p>

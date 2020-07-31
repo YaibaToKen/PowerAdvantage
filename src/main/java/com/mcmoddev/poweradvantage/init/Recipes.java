@@ -1,21 +1,19 @@
-package cyano.poweradvantage.init;
+package com.mcmoddev.poweradvantage.init;
 
 import com.mcmoddev.basemetals.data.MaterialNames;
 import com.mcmoddev.lib.data.Names;
 import com.mcmoddev.lib.init.Materials;
 import com.mcmoddev.lib.registry.CrusherRecipeRegistry;
 import com.mcmoddev.lib.util.ConfigBase.Options;
-import cyano.poweradvantage.PowerAdvantage;
-import cyano.poweradvantage.RecipeMode;
-import cyano.poweradvantage.registry.still.recipe.DistillationRecipeRegistry;
+import com.mcmoddev.poweradvantage.PowerAdvantage;
+import com.mcmoddev.poweradvantage.RecipeMode;
+import com.mcmoddev.poweradvantage.registry.still.recipe.DistillationRecipeRegistry;
+
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
-import cyano.poweradvantage.PowerAdvantage;
-import cyano.poweradvantage.RecipeMode;
-import cyano.poweradvantage.registry.still.recipe.DistillationRecipeRegistry;
 
 public abstract class Recipes {
 

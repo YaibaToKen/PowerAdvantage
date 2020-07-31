@@ -1,4 +1,4 @@
-package cyano.poweradvantage.api.fluid;
+package com.mcmoddev.poweradvantage.api.fluid;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
