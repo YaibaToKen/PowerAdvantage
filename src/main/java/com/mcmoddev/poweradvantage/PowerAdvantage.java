@@ -1,4 +1,4 @@
-package cyano.poweradvantage;
+package com.mcmoddev.poweradvantage;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -16,14 +16,16 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
-import cyano.poweradvantage.api.ConduitType;
-import cyano.poweradvantage.init.WorldGen;
-import cyano.poweradvantage.registry.FuelRegistry;
-import cyano.poweradvantage.registry.MachineGUIRegistry;
-import cyano.poweradvantage.registry.still.recipe.DistillationRecipeRegistry;
+import com.mcmoddev.poweradvantage.api.ConduitType;
+import com.mcmoddev.poweradvantage.init.WorldGen;
+import com.mcmoddev.poweradvantage.registry.FuelRegistry;
+import com.mcmoddev.poweradvantage.registry.MachineGUIRegistry;
+import com.mcmoddev.poweradvantage.registry.still.recipe.DistillationRecipeRegistry;
+
 import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.Mod;
@@ -32,8 +34,6 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.minecraftforge.fml.common.registry.GameData;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.oredict.OreDictionary;
@@ -216,8 +216,8 @@ dependencies {
  * @author DrCyano
  *
  */
-@Mod(modid = PowerAdvantage.MODID, version = PowerAdvantage.VERSION, name=PowerAdvantage.NAME, dependencies = "required-after:basemetals",
-		acceptedMinecraftVersions = "[1.11.2,)")
+@Mod(modid = PowerAdvantage.MODID, version = PowerAdvantage.VERSION, name=PowerAdvantage.NAME, dependencies = "required-after:mmdlib",
+		acceptedMinecraftVersions = "[1.12.2,)")
 public class PowerAdvantage
 {
 	/** The identifier for this mod */
@@ -273,107 +273,9 @@ public class PowerAdvantage
 	{
 		FMLLog.info("%s: loading config file", MODID);
 		instance = this;
-		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
-		config.load();
-		String[] presets = {"NORMAL", "TECH_PROGRESSION", "APOCALYPTIC"};
-		String mode = config.getString("recipe_mode", "options", "NORMAL", "NORMAL, APOCALYPTIC, or TECH_PROGRESSION. \n"
-		+ "Sets the style of recipes used in your game. \n"
-		+ "In NORMAL mode, everything needed is craftable from vanilla items and the machines are \n"
-		+ "available pretty much as soon as the player returns from their first mining expedition. \n"
-		+ "In APOCALYPTIC mode, some important items are not craftable, but can be found in \n"
-		+ "treasure chests, requiring the players to pillage for their machines. \n"
-		+ "In TECH_PROGRESSION mode, important items are very complicated to craft using vanilla \n"
-		+ "items, but are easy to duplicate once they are made. This gives the players a sense of \n"
-		+ "invention and rising throught the ages from stone-age to space-age.",presets).toUpperCase(Locale.US).trim();
-		switch (mode){
-		case "NORMAL":
-			recipeMode = RecipeMode.NORMAL;
-			break;
-
-		case "APOCALYPTIC":
-			recipeMode = RecipeMode.APOCALYPTIC;
-			break;
-
-		case "TECH_PROGRESSION":
-			recipeMode = RecipeMode.TECH_PROGRESSION;
-			break;
-
-		default:
-			FMLLog.severe(MODID+" does not recognize recipe_mode '"+mode+"'");
-			throw new IllegalArgumentException("'"+mode+"' is not valid for config option 'recipe_mode'. Valid options are: NORMAL, APOCALYPTIC, or TECH_PROGRESSION");
-		}
+		MinecraftForge.EVENT_BUS.register(com.mcmoddev.poweradvantage.init.Blocks.class);
 
 
-		chestLootFactor  = config.getFloat("treasure_chest_loot_factor", "options", 0.5f, 0.0f, 1000.0f, 
-				"Controls the rarity of items from this mod being found in treasure chests relative to \n"
-						+  "the frequency of other chest loot items. Set to 0 to disable metal ingots from \n"
-						+  "appearing in treasure chests.");
-		
-		plasticIsAlsoRubber = config.getBoolean("plastic_equals_rubber", "options", plasticIsAlsoRubber, 
-				"If true, then plastic will be useable in recipes as if it were rubber (for cross-mod compatibility)");
-
-		distillRecipes = config.getString("distiller_recipes", "recipes", 
-				"2*crude_oil->1*refined_oil;2*oil->1*refined_oil", 
-				  "List of distiller recipes in the format of #*name1->#*name2 where # is an \n"
-				+ "integer number and name1 and name2 are the fluid names of the input and \n"
-				+ "output of the recipe")
-				.split(";");
-		
-		useOtherFluids = config.getBoolean("use_other_fluids", "Other Power Mods", useOtherFluids, 
-				"If true, then Power Advantage will use existing fluids added by other mods where possible");
-		
-
-		
-		
-		String[] conversions = config.getString("RF_conversions", "Other Power Mods", 
-				"steam=8;electricity=0.25;quantum=8", 
-				"List of conversions from Power Advantage power types to RF, in units of RF per energy unit")
-				.split(";");
-		for(String c : conversions){
-			if(!c.contains("=")) continue;
-			String name = c.substring(0, c.indexOf('=')).trim().toLowerCase(Locale.US);
-			String val = c.substring(c.indexOf('=')+1).trim();
-			try{
-				Number d;
-				if(val.contains(".")){
-					d = Double.parseDouble(val);
-				} else {
-					d = Long.parseLong(val);
-				}
-				FMLLog.info("Adding conversion factor of "+d+" units of RF per unit of "+name);
-				rfConversionTable.put(new ConduitType(name), d.floatValue());
-			}catch(NumberFormatException ex){
-				FMLLog.severe("Cannot parse '"+val+"' as number");
-			}
-		}
-
-		String[] conversions2 = config.getString("TechReborn_conversions", "Other Power Mods",
-				"electricity=0.25",
-				"List of conversions from Power Advantage power types to EU, in units of EU per energy unit")
-				.split(";");
-		for(String c : conversions2){
-			if(!c.contains("=")) continue;
-			String name = c.substring(0, c.indexOf('=')).trim().toLowerCase(Locale.US);
-			String val = c.substring(c.indexOf('=')+1).trim();
-			try{
-				Number d;
-				if(val.contains(".")){
-					d = Double.parseDouble(val);
-				} else {
-					d = Long.parseLong(val);
-				}
-				FMLLog.info("Adding conversion factor of "+d+" EU per unit of "+name);
-				trConversionTable.put(new ConduitType(name), d.floatValue());
-			}catch(NumberFormatException ex){
-				FMLLog.severe("Cannot parse '"+val+"' as number");
-			}
-		}
-
-
-		config.save();
-
-		FMLLog.info("%s: creating orespawn file (if it doesn't already exist)", MODID);
-		
 		Path orespawnFolder = Paths.get(event.getSuggestedConfigurationFile().toPath().getParent().toString(),"orespawn");
 		Path orespawnFile = Paths.get(orespawnFolder.toString(),MODID+".json");
 		if(!Files.exists(orespawnFile)){
@@ -387,10 +289,10 @@ public class PowerAdvantage
 
 
 		FMLLog.info("%s: initializing fluids, blocks, items, and loot tables", MODID);
-		cyano.poweradvantage.init.Fluids.init(); 
-		cyano.poweradvantage.init.Blocks.init();
-		cyano.poweradvantage.init.Items.init();
-		cyano.poweradvantage.init.TreasureChests.init(event.getSuggestedConfigurationFile().toPath().getParent());
+		com.mcmoddev.poweradvantage.init.Fluids.init(); 
+		com.mcmoddev.poweradvantage.init.Blocks.init();
+		com.mcmoddev.poweradvantage.init.Items.init();
+		com.mcmoddev.poweradvantage.init.TreasureChests.init(event.getSuggestedConfigurationFile().toPath().getParent());
 
 		// keep this next comment, it is useful for finding Vanilla recipes
 		//OreDictionary.initVanillaEntries();
@@ -402,16 +304,6 @@ public class PowerAdvantage
 		}
 
 		FMLLog.info("%s: preinit complete", MODID);
-	}
-
-	@SideOnly(Side.CLIENT)
-	private void clientPreInit(FMLPreInitializationEvent event){
-		// client-only code
-		cyano.poweradvantage.init.Blocks.bakeModels();
-	}
-	@SideOnly(Side.SERVER)
-	private void serverPreInit(FMLPreInitializationEvent event){
-		// client-only code
 	}
 
 	/**
@@ -446,18 +338,19 @@ public class PowerAdvantage
 
 		FMLLog.info("%s: adding GUI handler", MODID);
 		NetworkRegistry.INSTANCE.registerGuiHandler(PowerAdvantage.getInstance(), MachineGUIRegistry.getInstance());
-		GameRegistry.registerFuelHandler(FuelRegistry.getInstance());
+		// Fuel Burn Times are handled in the item
+		//GameRegistry.registerFuelHandler(FuelRegistry.getInstance());
 
 		FMLLog.info("%s: initializing more content", MODID);
-		cyano.poweradvantage.init.Fuels.init();
-		cyano.poweradvantage.init.Entities.init();
-		cyano.poweradvantage.init.Recipes.init();
-		cyano.poweradvantage.init.Recipes.initDistillationRecipes(distillRecipes);
-		cyano.poweradvantage.init.Villages.init(); 
-		cyano.poweradvantage.init.GUI.init();
+		com.mcmoddev.poweradvantage.init.Fuels.init();
+		com.mcmoddev.poweradvantage.init.Entities.init();
+		com.mcmoddev.poweradvantage.init.Recipes.init();
+		com.mcmoddev.poweradvantage.init.Recipes.initDistillationRecipes(distillRecipes);
+		com.mcmoddev.poweradvantage.init.Villages.init(); 
+		com.mcmoddev.poweradvantage.init.GUI.init();
 
 		FMLLog.info("%s: mod support data registries", MODID);
-		cyano.poweradvantage.init.ModSupport.init(detectedRF,detectedTechReborn);
+		com.mcmoddev.poweradvantage.init.ModSupport.init(detectedRF,detectedTechReborn);
 
 
 		if(event.getSide() == Side.CLIENT){
@@ -475,9 +368,9 @@ public class PowerAdvantage
 	private void clientInit(FMLInitializationEvent event){
 		// client-only code
 		FMLLog.info("%s: initializing renders", MODID);
-		cyano.poweradvantage.init.Items.registerItemRenders(event);
-		cyano.poweradvantage.init.Blocks.registerItemRenders(event);
-		cyano.poweradvantage.init.ModSupport.registerItemRenders(event);
+		com.mcmoddev.poweradvantage.init.Items.registerItemRenders(event);
+		com.mcmoddev.poweradvantage.init.Blocks.registerItemRenders(event);
+		com.mcmoddev.poweradvantage.init.ModSupport.registerItemRenders(event);
 	}
 	@SideOnly(Side.SERVER)
 	private void serverInit(FMLInitializationEvent event){
